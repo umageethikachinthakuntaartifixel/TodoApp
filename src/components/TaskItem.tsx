@@ -17,7 +17,7 @@ export const TaskItem: React.FC<TaskItemProps> = ({ task, isCompleted = false })
   const [editName, setEditName] = useState(task.name);
   const [editPriority, setEditPriority] = useState<Priority>(task.priority);
   const [editCategory, setEditCategory] = useState<Category>(task.category);
-  // ── Handlers ───────────────────────────────────────────────────────────────
+ 
   const handleSave = () => {
     updateTask(task.id, {
       name: editName,
@@ -44,7 +44,7 @@ export const TaskItem: React.FC<TaskItemProps> = ({ task, isCompleted = false })
   const getBorderColor = (priority: Priority) => {
     return priority === 'High' ? '#ef4444' : priority === 'Medium' ? '#f59e0b' : '#10b981';
   };
-  // ── Edit modal ─────────────────────────────────────────────────────────────
+
   const editModal = (
     <Modal
       opened={isEditing}
@@ -124,7 +124,7 @@ export const TaskItem: React.FC<TaskItemProps> = ({ task, isCompleted = false })
       </Stack>
     </Modal>
   );
-  // ── Completed task view ────────────────────────────────────────────────────
+ //completed task view
   if (isCompleted) {
     return (
       <Paper
@@ -185,7 +185,7 @@ export const TaskItem: React.FC<TaskItemProps> = ({ task, isCompleted = false })
       </Paper>
     );
   }
-  // ── Pending task view ──────────────────────────────────────────────────────
+
   return (
     <>
       {editModal}

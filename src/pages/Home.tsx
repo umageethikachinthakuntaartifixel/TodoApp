@@ -78,7 +78,7 @@ export const Home: React.FC = () => {
 
     reorderTasks(sourceIndex, dropIndex);
   };
-  // ── Derived data ───────────────────────────────────────────────────────────
+
   const pendingTasks = tasks.filter((t) => !t.completed);
 
   const filteredTasks = pendingTasks.filter((task) => {
@@ -86,7 +86,7 @@ export const Home: React.FC = () => {
     if (filter === 'High' || filter === 'Medium' || filter === 'Low') return task.priority === filter;
     return task.category === filter;
   });
-  // ── Render ─────────────────────────────────────────────────────────────────
+
   return (
     <>
       {/* Stats bar */}

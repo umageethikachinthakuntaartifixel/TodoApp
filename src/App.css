@@ -1,10 +1,10 @@
-/* ── Global reset ────────────────────────────────────────────────────────── */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-/* ── App container ───────────────────────────────────────────────────────── */
+
 .app {
   max-width: 2000px;
   margin: 0 auto;
@@ -14,7 +14,7 @@
   box-shadow: 0 4px 16px rgba(79, 70, 229, 0.12);
   min-height:90vh;
 }
-/* ── Page body padding ───────────────────────────────────────────────────── */
+
 .body {
   padding: 20px;
 }
@@ -22,8 +22,7 @@
 .cbody {
   padding: 20px;
 }
-/* ── Drag and drop ───────────────────────────────────────────────────────── */
-/* These styles cannot come from Mantine because they target native HTML drag */
+
 .draggable-task-wrapper {
   cursor: grab;
   transition: transform 0.15s ease, box-shadow 0.15s ease;

@@ -32,7 +32,7 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
   useEffect(() => {
     saveTasksToStorage(tasks);
   }, [tasks]);
-  // ── Task operations ──────────────────────────────────────────────────────
+
   const addTask = (task: Omit<Task, 'id' | 'createdAt' | 'completedAt'>) => {
     const newTask: Task = {
       ...task,
@@ -100,7 +100,7 @@ export const TaskProvider: React.FC<{ children: React.ReactNode }> = ({ children
     </TaskContext.Provider>
   );
 };
-// ── Custom hook ───────────────────────────────────────────────────────────────
+
 export const useTaskContext = () => {
   const context = useContext(TaskContext);
 
